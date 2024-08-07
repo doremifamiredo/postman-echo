@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.hasSize;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 class postmanEchoTest {
@@ -15,7 +14,7 @@ class postmanEchoTest {
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("data", equalTo("Hi"))
+                .body("data", equalTo("Hi!"))
                 ;
     }
 }
